@@ -12,7 +12,7 @@ const ProfileForm = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/users/profile', {
+        const res = await axios.get('https://node-react-board-backend.onrender.com/api/users/profile', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setName(res.data.name);
@@ -29,7 +29,7 @@ const ProfileForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put('http://localhost:5000/api/users/profile', { name, email, password }, {
+      const res = await axios.put('https://node-react-board-backend.onrender.com/api/users/profile', { name, email, password }, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setUser(res.data);
@@ -66,15 +66,6 @@ const ProfileForm = () => {
             required
           />
         </div>
-        {/* <div className="mb-4">
-          <label className="block text-gray-700">Password</label>
-          <input
-            type="password"
-            className="w-full p-2 border rounded"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div> */}
         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Save</button>
       </form>
     </div>
