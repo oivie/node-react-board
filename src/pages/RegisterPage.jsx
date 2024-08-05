@@ -18,7 +18,7 @@ const RegisterPage = () => {
     }
 
     try {
-      const response = await axios.post('https://node-react-board-backend.onrender.com/api/auth/register', {
+      const response = await axios.post('/api/auth/register', {
         name,
         email,
         password
