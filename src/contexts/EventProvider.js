@@ -10,7 +10,7 @@ const EventProvider = ({ children }) => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/events', {
+        const response = await axios.get('https://node-react-board-backend.onrender.com/api/events', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setEvents(response.data);
