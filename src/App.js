@@ -16,6 +16,8 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
+axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL;
+
 const AppContent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { user, setUser } = useContext(UserContext);
