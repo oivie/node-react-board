@@ -35,13 +35,13 @@ const CreateEditEventModal = ({ isOpen, onRequestClose, event }) => {
       let res;
       if (event) {
         // Update existing event
-        res = await axios.put(`http://localhost:5000/api/events/${event._id}`, newEvent, {
+        res = await axios.put(`https://node-react-board-backend.onrender.com/api/events/${event._id}`, newEvent, {
           headers: { Authorization: `Bearer ${token}` },
         });
         updateEvent(res.data);
       } else {
         // Create new event
-        res = await axios.post('http://localhost:5000/api/events', newEvent, {
+        res = await axios.post('https://node-react-board-backend.onrender.com/api/events', newEvent, {
           headers: { Authorization: `Bearer ${token}` },
         });
         addEvent(res.data);
