@@ -14,7 +14,7 @@ const DashboardPage = () => {
     if (user) {
       const fetchEvents = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/api/events/user/${user.id}`, {
+          const response = await axios.get(`https://node-react-board-backend.onrender.com/api/events/user/${user.id}`, {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
           });
           setEvents(response.data);
