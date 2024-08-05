@@ -36,7 +36,7 @@ const AppContent = () => {
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
       const fetchUserProfile = async () => {
         try {
-          const response = await axios.get('https://node-react-board-backend.onrender.com/api/users/profile');
+          const response = await axios.get('/api/users/profile');
           setUser(response.data);
         } catch (error) {
           console.error('Error fetching user profile:', error);
