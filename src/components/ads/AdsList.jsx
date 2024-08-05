@@ -9,7 +9,7 @@ const AdsList = ({ filter }) => {
   useEffect(() => {
     const fetchAds = async () => {
       try {
-        const res = await axios.get(`https://node-react-board-backend.onrender.com/api/events/user/${user.id}`, {
+        const res = await axios.get(`/api/events/user/${user.id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setAds(res.data);
@@ -29,7 +29,7 @@ const AdsList = ({ filter }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://node-react-board-backend.onrender.com/api/events/${id}`, {
+      await axios.delete(`/api/events/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setAds(ads.filter((ad) => ad._id !== id));
