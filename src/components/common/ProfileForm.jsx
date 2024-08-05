@@ -12,7 +12,7 @@ const ProfileForm = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get('https://node-react-board-backend.onrender.com/api/users/profile', {
+        const res = await axios.get('/api/users/profile', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setName(res.data.name);
@@ -29,7 +29,7 @@ const ProfileForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put('https://node-react-board-backend.onrender.com/api/users/profile', { name, email, password }, {
+      const res = await axios.put('/api/users/profile', { name, email, password }, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setUser(res.data);
