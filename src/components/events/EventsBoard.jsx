@@ -37,7 +37,7 @@ const EventsBoard = ({ openModal }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/events/${id}`, {
+      await axios.delete(`https://node-react-board-backend.onrender.com/api/events/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       // Update the local state immediately after successful deletion
