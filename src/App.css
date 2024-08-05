@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+
+.modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 128, 0.8); /* Dark blue background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
