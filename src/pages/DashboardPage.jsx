@@ -14,7 +14,7 @@ const DashboardPage = () => {
     if (user) {
       const fetchEvents = async () => {
         try {
-          const response = await axios.get(`https://node-react-board-backend.onrender.com/api/events/user/${user.id}`, {
+          const response = await axios.get(`/api/events/user/${user.id}`, {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
           });
           setEvents(response.data);
@@ -33,7 +33,7 @@ const DashboardPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/events/${id}`, {
+      await axios.delete(`/api/events/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setEvents(events.filter((event) => event._id !== id));
