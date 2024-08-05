@@ -17,7 +17,7 @@ const EventForm = () => {
       date,
       location,
     };
-    // Add the new event to the events array (you need to handle this)
+    // Add the new event to the events array 
     // Send newEvent to the backend or update the state with the new event
     console.log(newEvent); // Log the new event for now
     navigate('/dashboard');
