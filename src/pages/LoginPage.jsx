@@ -13,7 +13,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://node-react-board-backend.onrender.com/api/auth/login', { email, password });
+      const res = await axios.post('/api/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
       setUser({ id: res.data.user.id, name: res.data.user.name, email: res.data.user.email });
       navigate('/dashboard');
