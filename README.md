@@ -18,21 +18,19 @@ This is the frontend part of the Node React Board application. It is built with 
 ```bash
 git clone https://github.com/oivie/node-react-board-b.git
 cd node-react-board-b/frontend
-Install dependencies:
-bash
-Copy code
+
+### Install dependencies:
 npm install
-Create a .env file in the root directory with the following content:
+
+### Create a .env file in the root directory with the following content:
 env
-Copy code
 REACT_APP_BACKEND_URL=https://node-react-board-backend.onrender.com
-Start the development server:
-bash
-Copy code
+
+### Start the development server:
 npm start
 The application will start on http://localhost:3000.
 
-Features
+## Features
 User registration and login
 Create, edit, and delete events
 Filter events by tags
@@ -40,5 +38,5 @@ View user profile and update profile details
 Deployment
 This frontend is deployed on Vercel. You can access it at: https://tech-board-full-stack.vercel.app.
 
-License
+## License
 This project is licensed under the MIT License.
